@@ -1,0 +1,735 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /**Reset para REMS- 62.5% = 10px de 16px **/
+}
+
+@import url(//db.onlinewebfonts.com/c/f220dbb7bde1d00644ad365e87d02af1?family=Coco+Gothic);
+@font-face {
+    font-family: Coco-Light;
+    src: url(/Fuente/CocoGothic-UltraLight_trial.ttf);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    background-color: #f0f4f6;
+    overflow-x: hidden;
+}
+
+
+/*Global*/
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    /** = 1200px**/
+    margin: 0 auto;
+}
+
+.contenedor-body {
+    width: 95%;
+    max-width: 150rem;
+    /** = 1200px**/
+    margin: 3rem auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+span {
+    color: #1eb6db;
+}
+
+h2 {
+    font-size: 3.4rem;
+    font-weight: 500;
+    width: 95%;
+    max-width: 150rem;
+    /** = 1200px**/
+    margin: 3rem auto;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+
+/*Utilidades*/
+
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+
+/*Botones*/
+
+.boton {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.boton-azul {
+    background-color: #0c76c4;
+    color: white;
+}
+
+
+/* Header */
+
+.site-header {
+    padding: 0;
+}
+
+.site-header.inicio {
+    height: auto;
+}
+
+@media (min-width: 900px) {
+    .site-header.inicio {
+        height: auto;
+    }
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    color: black;
+    -webkit-animation: mainFadeIn 2s forwards;
+    animation: mainFadeIn 2s forwards;
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+    opacity: 0;
+}
+
+.header-other {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    color: black;
+}
+
+.contenido-header img {
+    max-width: 8rem;
+}
+
+.header-other img {
+    max-width: 8rem;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.barra {
+    padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/* Navegación */
+
+.navegacion a {
+    color: black;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-right: 2rem;
+    }
+    .navegacion a :last-of-type {
+        margin: 0;
+    }
+}
+
+.navegacion a:hover {
+    color: #2abbff;
+}
+
+.navegacion a:last-of-type {
+    margin-right: 0;
+}
+
+
+/*Mobile menu*/
+
+.mobile-menu img {
+    width: 5rem;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+.navegacion:target {
+    display: block;
+}
+
+.navegacion {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: block;
+    }
+}
+
+
+/*Logo INICIO*/
+
+.block {
+    width: 0%;
+    background: #1eb6db;
+    position: absolute;
+    height: 7rem;
+    -webkit-animation: mainBlock 5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation: mainBlock 5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+}
+
+.contenedor-titulo {
+    width: 100%;
+    height: 100vh;
+    background: #f0f4f6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 50%;
+}
+
+.contenedor-titulo .box {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 1.4rem;
+}
+
+.contenedor-titulo .box .title {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.contenedor-titulo .box .title h1 {
+    font-family: Coco-Light;
+    color: #1eb6db;
+    font-size: 10rem;
+    font-weight: 550;
+    -webkit-animation: mainFadeIn 0s forwards;
+    animation: mainFadeIn 1s forwards;
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+    opacity: 0;
+    font-size: 4.5rem;
+}
+
+.QU {
+    -webkit-animation: mainFadeIn 0s forwards;
+    animation: mainFadeIn 0s forwards;
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    position: relative;
+    color: black;
+    font-family: Coco-Light;
+    font-size: 4.5rem;
+    font-weight: 550;
+}
+
+@media (min-width: 900px) {
+    .contenedor-titulo .box .title h1 {
+        font-size: 10rem;
+        -webkit-animation-delay: 1.7s;
+        animation-delay: 1.7s;
+    }
+    .QU {
+        -webkit-animation-delay: 1.8s;
+        animation-delay: 1.8s;
+        font-size: 10rem;
+    }
+    .contenedor-titulo {
+        padding-bottom: 10%;
+    }
+    .block {
+        height: 10rem;
+    }
+}
+
+@-webkit-keyframes mainBlock {
+    18% {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 50.5%;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+        background-color: black;
+    }
+}
+
+@keyframes mainBlock {
+    18% {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 50.5%;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+        background-color: black;
+    }
+}
+
+@-webkit-keyframes mainFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes mainFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*Inicio - Nosotros*/
+
+@media (min-width: 768px) {
+    .inicio-nosotros {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .inicio-nosotros .imagen-nosotros {
+        flex-basis: 60%;
+    }
+    .inicio-nosotros .texto-nosotros {
+        flex-basis: calc(40% - 3rem);
+        font-size: 2.5rem;
+    }
+}
+
+
+/*Grid*/
+
+@media (min-width: 768px) {
+    .grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .grid img {
+        max-width: 50%;
+    }
+    .centrar-columnas {
+        justify-content: center;
+    }
+    .columnas-4 {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .columnas-6 {
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .columnas-8 {
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+    .columnas-10 {
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columnas-12 {
+        flex: 0 0 100%;
+    }
+}
+
+
+/*Inicio - Rover*/
+
+.inicio-rover h2 {
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 40%;
+    transform: translate(-34%, -50%);
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.inicio-rover {
+    position: relative;
+    height: 55vh;
+}
+
+.parallax::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    filter: brightness(50%);
+}
+
+.parallax:hover::before {
+    filter: brightness(40%);
+}
+
+section.inicio-rover::before {
+    background-image: url(/img/rover2021Prueba.jpg);
+    content: '';
+}
+
+@media (min-width: 768px) {
+    .inicio-rover h2 {
+        color: #f0f4f6;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3.7rem;
+        margin: 0;
+    }
+}
+
+
+/*Inicio - Patrocinadores*/
+
+.inicio-patrocinios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    justify-items: center;
+    row-gap: 4rem;
+}
+
+.patrocinador {
+    width: 18rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.patrocinador:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+    .inicio-patrocinios {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.2rem;
+        row-gap: 8rem;
+    }
+    .patrocinador {
+        margin-bottom: 2rem;
+        width: 30rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .contacto-patrocinios {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+}
+
+@media (min-width: 768px) {
+    .contacto-patrocinios .imagen-nosotros {
+        flex-basis: 60%;
+    }
+    .contacto-patrocinios .texto-nosotros {
+        flex-basis: calc(40% - 3rem);
+        font-size: 2.5rem;
+    }
+}
+
+
+/*Footer*/
+
+.site-footer {
+    background-color: #0c76c4;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.site-footer nav a {
+    color: white;
+    margin: 0;
+    padding: 3rem;
+}
+
+.site-footer nav:last-of-type {
+    padding-right: 0;
+}
+
+.site-footer nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+.site-footer h2 {
+    font-family: Coco-Light;
+    color: white;
+}
+
+.hashtag {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.socialMedia {
+    display: block;
+    align-items: center;
+    margin: 5rem auto;
+}
+
+footer img {
+    width: 5rem;
+    margin: 0 2rem;
+}
+
+.site-footer p {
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+}
+
+
+/*URC*/
+
+
+/*Intro - Video CAD Rover*/
+
+.intro {
+    height: 100vh;
+}
+
+.intro video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.intro h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 7rem;
+}
+
+.intro-postvideo {
+    height: 100vh;
+    color: black;
+}
+
+.intro-postvideo h2 {
+    padding-top: 30rem;
+    text-align: center;
+    font-size: 7rem;
+}
+
+
+/*Contacto*/
+
+.contact-form {
+    flex-direction: row-reverse;
+}
+
+@media (min-width: 768px) {
+    .contact-form {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-form img {
+        flex-basis: 60%;
+        width: 4rem;
+    }
+    .contact-form form {
+        flex-basis: calc(40% - 3rem);
+    }
+}
+
+.contact-text {
+    width: 95%;
+    max-width: 150rem;
+    margin: 3rem auto;
+}
+
+
+/*Form*/
+
+fieldset {
+    border: none;
+}
+
+label {
+    font-weight: 500;
+    text-transform: uppercase;
+    display: block;
+    padding-bottom: 0.5rem;
+}
+
+legend {
+    font-size: 2.4rem;
+    color: #333333;
+}
+
+textarea {
+    height: 25rem;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+    background-color: #e1e1e1;
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 0.8rem;
+    resize: none;
+    border: 2px solid #8b8a8b;
+}
+
+.input:focus {
+    border-color: hsl(203, 76%, 44%);
+    box-shadow: 0 0 0 3px hsla(203, 76%, 84%, 0.8);
+    transition: 180ms box-shadow ease-in-out;
+    outline: 3px solid transparent;
+}
